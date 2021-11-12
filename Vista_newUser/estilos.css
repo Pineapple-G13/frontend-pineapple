@@ -29,7 +29,8 @@ body {
 
 .formularioInput,
 .formularioLabel,
-.formularioSubmit {
+.formularioSubmit,
+.formularioSubmitCancel {
   display: block;
   width: 100%;
   font-size: 1.3em; }
@@ -56,6 +57,16 @@ body {
   background: #DAB700;
   color: #fff;
   border: none; }
+
+  .formularioSubmitCancel {
+  background: #B69B11;
+  color: #fff;
+  border: none; }
+
+  .opt {
+    font-size: 1.3em;
+    color: #000;
+  }
 
 .fijar {
   margin-top: -150px; }
@@ -95,6 +106,8 @@ font-size: 1.3em; }
   margin-bottom: 10px;
   width: 100%;
   order: 0;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1.3em;
 }
 
 .selected::after {
