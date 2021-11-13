@@ -19,9 +19,10 @@
     grid-gap: 10px;
     list-style: none;
     text-align: center;
-    width: 70vw;
+    width: 80vw;
     justify-content: end;
     margin-right: 2rem;
+    margin-bottom: 0%;
 }
 .nav-links{
     color: #707060;
@@ -30,6 +31,7 @@
 }
 .nav-links:hover{
     background-color:rgb(241,241,239);
+    color: #707060;
     border-radius: 4px;
     transition: all 0.2s ease-out;
 }
@@ -45,9 +47,10 @@
     display: block;
 }
 .nav-links-mobile:hover{
+    color: #707060;
     background-color:rgb(241,241,239);
     transition: all 0.2s ease-out;
-    border: 1px solid #707060;
+   /*  border: 1px solid #707060 */;
 }
 .menu-icon{
     display: none;
