@@ -12,7 +12,11 @@ const Home = () => {
         <h2>Welcome</h2>
       </div>
       <footer>
-        <a className="nav-link textoGit" href="https://github.com/Pineapple-G13">GitHub-Team G13</a>
+{/*         <a className="nav-link textoGit" href="https://github.com/Pineapple-G13">GitHub-Team G13</a> */}
+        
+        <a className="nav-link textoGit" href="https://github.com/Pineapple-G13" target="_blank" rel="noopener noreferrer">
+        <span>GitHub-Team G13 </span></a>
+        
         <p className="fs-6 fw-light textoDev " >Developed by Adriana Jimenez, Shel Valdez, Valentina, Vilma Garcia </p>
         <img src={logoGithub} className="headerIcon" alt="logoGithub" />
       </footer>

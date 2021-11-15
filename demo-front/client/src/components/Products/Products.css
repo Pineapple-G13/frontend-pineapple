@@ -1,0 +1,12 @@
+.fas.fa-edit{
+    color:#B69B11;
+}
+.btnEdit{
+    font-size: 20px;
+    background: transparent;
+    border: 0;
+    padding: 20px;
+}
+.fas.fa-trash-alt{
+    color:#DC3545;
+}

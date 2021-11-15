@@ -2,20 +2,10 @@ import React, {useState } from 'react'
 /* import axios from "axios"; */
 import { Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './Products.css';
+import {productos} from './data'
 
 const Products = () => {
-
-    const productos = [
-        { id: 1, nombre: "Papa", categoria: "fruta",descripcion:"nose soy una papa",cantidad:244,precio_unitario:20 },
-        { id: 2, nombre: "pera", categoria: "fruta",descripcion:"nose soy una pera",cantidad:244,precio_unitario:20 },
-        { id: 3, nombre: "manzana", categoria: "fruta",descripcion:"nose soy una manzana",cantidad:244,precio_unitario:20 },
-        { id: 4, nombre: "zanahoria", categoria: "fruta",descripcion:"nose soy una zanahoria",cantidad:244,precio_unitario:20 },
-        { id: 5, nombre: "ssss", categoria: "fruta",descripcion:"nose soy una sssss",cantidad:244,precio_unitario:20 },
-        { id: 6, nombre: "hola", categoria: "fruta",descripcion:"lorem input",cantidad:244,precio_unitario:20 },
-        { id: 7, nombre: "Calabaza", categoria: "fruta",descripcion:"dadadsaa",cantidad:244,precio_unitario:20 },
-        { id: 8, nombre: "MESA", categoria: "fruta",descripcion:"asdadaaaaaadasdasda",cantidad:244,precio_unitario:20 },
-        { id: 9, nombre: "Agua", categoria: "fruta",descripcion:"nose soy una papa",cantidad:244,precio_unitario:20 },
-        ];
 
     const [data, setData] = useState(productos);
     const [modalEditar, setModalEditar] = useState(false);
@@ -31,7 +21,7 @@ const Products = () => {
         precio_unitario:0
         });
         
-    const seleccionarPais=(elemento, caso)=>{
+    const seleccionarProducto=(elemento, caso)=>{
         setProductSeleccionado(elemento);
         (caso==='Editar')?setModalEditar(true):setModalEliminar(true)
     }
@@ -53,7 +43,7 @@ const Products = () => {
                 prod.categoria=productSeleccionado.categoria;
                 prod.descripcion=productSeleccionado.descripcion;
                 prod.cantidad=productSeleccionado.cantidad;
-                prod.precio_unitario=productSeleccionado.precio_unitario
+                prod.precio_unitario=productSeleccionado.precio_unitario;
             }
         });
         setData(dataNueva);
@@ -98,16 +88,17 @@ const Products = () => {
                     </tr>
                     </thead>
                     <tbody>
-                    {data.map(elemento=>(
+                    {data.map((elemento,key)=>(
                         <tr>
-                        <td>{elemento.id}</td>
-                        <td>{elemento.nombre}</td>
-                        <td>{elemento.categoria}</td>
-                        <td>{elemento.descripcion}</td>
-                        <td>{elemento.cantidad}</td>
-                        <td>{elemento.precio_unitario}</td>
-                        <td><button className="btn btn-primary" onClick={()=>seleccionarPais(elemento, 'Editar')}>Editar</button> {"   "} 
-                        <button className="btn btn-danger" onClick={()=>seleccionarPais(elemento, 'Eliminar')}>Eliminar</button></td>
+                          <td>{key=elemento.id}</td>
+                          <td>{elemento.nombre}</td>
+                          <td>{elemento.categoria}</td>
+                          <td>{elemento.descripcion}</td>
+                          <td>{elemento.cantidad}</td>
+                          <td>{elemento.precio_unitario}</td>
+                          <td><button className="btnEdit" onClick={()=>seleccionarProducto(elemento, 'Editar')} ><i className="fas fa-edit"></i></button>
+                              <button className="btnEdit" onClick={()=>seleccionarProducto(elemento, 'Eliminar')}><i className="fas fa-trash-alt"></i></button>
+                          </td>
                         </tr>
                     ))
                     }
@@ -116,7 +107,7 @@ const Products = () => {
                 <Modal isOpen={modalEditar}>
         <ModalHeader>
           <div>
-            <h3>Editar País</h3>
+            <h3>Editar Producto</h3>
           </div>
         </ModalHeader>
         <ModalBody>
@@ -127,7 +118,7 @@ const Products = () => {
               readOnly
               type="text"
               name="id"
-              value={productSeleccionado && setProductSeleccionado.id}
+              value={productSeleccionado && productSeleccionado.id}
             />
             <br />
 
@@ -144,7 +135,7 @@ const Products = () => {
             <input
               className="form-control"
               type="text"
-              name="nombre"
+              name="categoria"
               value={productSeleccionado && productSeleccionado.categoria}
               onChange={handleChange}
             />
@@ -153,7 +144,7 @@ const Products = () => {
             <input
               className="form-control"
               type="text"
-              name="nombre"
+              name="descripcion"
               value={productSeleccionado && productSeleccionado.descripcion}
               onChange={handleChange}
             />
@@ -162,7 +153,7 @@ const Products = () => {
             <input
               className="form-control"
               type="number"
-              name="categoria"
+              name="cantidad"
               value={productSeleccionado && productSeleccionado.cantidad}
               onChange={handleChange}
             />
@@ -171,7 +162,7 @@ const Products = () => {
             <input
               className="form-control"
               type="number"
-              name="categoria"
+              name="precio_unitario"
               value={productSeleccionado && productSeleccionado.precio_unitario}
               onChange={handleChange}
             />
