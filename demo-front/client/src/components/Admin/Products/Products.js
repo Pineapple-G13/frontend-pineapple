@@ -71,7 +71,7 @@ const Products = () => {
         
         return (
             <div className="container">
-                <h2>Productos</h2>
+                <h2 className="paddingH2">Productos</h2>
                 <br />
                 <button className="btn btn-success" onClick={()=>abrirModalInsertar()}>New Product</button>
                 <br /><br />

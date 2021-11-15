@@ -1,5 +1,6 @@
 import React , { useState } from 'react';
 import { Button, Container, Row, Col } from 'react-bootstrap';
+import './SignIn.css'
 
 const SignIn = () => {
    /*  const authContext = React.useContext(CartContext);
@@ -26,7 +27,7 @@ const SignIn = () => {
         <Container>
             <Row className="justify-content-md-center">
                 <Col md="6">
-                    <h3>Login</h3>
+                    <h2 className="paddingh2">Login</h2>
                     <form /* onSubmit={submit} */>
                         <div className="form-item">
                             <label>User</label>

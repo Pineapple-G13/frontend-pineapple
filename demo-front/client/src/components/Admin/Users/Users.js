@@ -76,7 +76,7 @@ const Users = () => {
     return (
         <div>
             <div className="container">
-                <h2>Users</h2>
+                <h2 className="paddingH2">Users</h2>
                 <br />
                 <button className="btn btn-success" onClick={()=>abrirModalInsertar()}>New User</button>
                 <br /><br />
