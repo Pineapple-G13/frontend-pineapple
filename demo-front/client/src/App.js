@@ -8,8 +8,8 @@ import {
 
 import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home'
-import Products from './components/Products/Products'
-import Users from './components/Users/Users'
+import Products from './components/Admin/Products/Products'
+import Users from './components/Admin/Users/Users'
 import Login from './components/Login/SignIn'
 
 function App() {
