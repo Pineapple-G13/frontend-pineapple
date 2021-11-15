@@ -1,0 +1,131 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  outline: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: #F1F1EF;
+  color: #5C5C4A;
+  font-family: Roboto, Helvetica, sans-serif;
+}
+
+h1 {
+  color: #7A680B;
+  margin-bottom: 25px;
+}
+
+.layout--main {
+  padding: 40px;
+}
+
+nav {
+  padding: 10px 15px;
+  background-color: #FFFFFF;
+  color: #5C5C4A;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__left-wrap {
+  display: flex;
+}
+.nav__left-wrap ul {
+  display: flex;
+  align-items: center;
+}
+.nav__left-wrap ul li {
+  /* menu/default */
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.4rem;
+  letter-spacing: 0.065em;
+  list-style: none;
+  margin: 0px 0px 0px 30px;
+}
+
+.user {
+  color: #B69B11;
+  font-size: 1.8rem;
+  letter-spacing: 0.065em;
+}
+
+.heading-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.ui-container form input {
+  margin-left: 20px;
+}
+
+.h1-home {
+  margin: 0px 0px 0px;
+}
+
+table tr:nth-child(even):hover, table tr:hover {
+  background-color: #e0dfdf;
+}
+
+.table__container {
+  background-color: #FFFFFF;
+  padding: 0px 24px 24px 24px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border: none;
+  border-collapse: collapse;
+}
+table tr:hover:first-child {
+  background-color: #FFFFFF;
+}
+table tr:nth-child(even) {
+  background-color: #F1F1EF;
+}
+table td, table th {
+  text-align: left;
+  padding: 20px;
+  vertical-align: text-top;
+}
+.btn-edit {
+  background-color: transparent;
+  border: none;
+  color: #B69B11;
+  padding: 5px;
+}
+.btn-edit:hover {
+  color: #cc6402;
+}
+
+input {
+  border: none;
+  padding: 15px;
+}
+
+.btn-secondary, .btn-primary {
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color: #DAB700;
+}
+
+.btn-secondary {
+  background-color: #B69B11;
+}
+
+/*# sourceMappingURL=style.css.map */

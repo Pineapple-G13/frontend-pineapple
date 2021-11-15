@@ -1,0 +1,38 @@
+$font-stack: Roboto, Helvetica, sans-serif;
+$deep-black-color: #000;
+$black-color: #5C5C4A;
+$titles: #7A680B;
+$white-color: #FFFFFF;
+$bg-color: #F1F1EF;
+$cream-color: #FFFFEA;
+$primary-color: #DAB700;
+$secondary-color: #B69B11;
+$yellow-color: #FFD600;
+
+*{
+    margin: 0px;
+    padding: 0px;
+    outline: 0px;
+    box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    background-color: $bg-color;
+    color: $black-color;
+    font-family: $font-stack;
+}
+
+h1{
+    color: $titles;
+    margin-bottom: 25px;
+}
+
+.layout--main{
+    padding: 40px;
+}
+

@@ -1,0 +1,18 @@
+input{
+    border: none;
+    padding: 15px;
+}
+
+%btn-text{
+    color: $white-color;
+    font-weight: bold;
+}
+
+.btn-primary{
+    @extend %btn-text;
+    background-color: $primary-color;
+}
+ .btn-secondary{
+    @extend %btn-text;
+     background-color: $secondary-color;
+ }
