@@ -1,0 +1,60 @@
+%hover {
+    background-color: rgb(224, 223, 223);
+}
+
+.table__container {
+    background-color: $white-color;
+    padding: 0px 24px 24px 24px;
+    overflow-x:auto;
+}
+
+table {
+
+    width: 100%;
+    border: none;
+    border-collapse: collapse;
+
+    tr {
+
+        &:hover {
+            @extend %hover;
+
+            &:first-child {
+                background-color: $white-color;
+            }
+        }
+
+        &:nth-child(even) {
+            background-color: $bg-color;
+
+            &:hover {
+                @extend %hover;
+            }
+        }
+    }
+
+    %cell {
+        text-align: left;
+        padding: 20px;
+        vertical-align: text-top;
+    }
+
+    th {
+        @extend %cell;
+    }
+
+    td {
+        @extend %cell;
+    }
+}
+
+.btn-edit {
+    background-color: transparent;
+    border: none;
+    color: $secondary-color;
+    padding: 5px;
+    &:hover{
+        color: rgb(204, 100, 2);
+    }
+
+}
