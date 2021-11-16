@@ -88,9 +88,9 @@ const Products = () => {
                     </tr>
                     </thead>
                     <tbody>
-                    {data.map((elemento,key)=>(
-                        <tr>
-                          <td>{key=elemento.id}</td>
+                    {data.map((elemento)=>(
+                        <tr key={elemento.id}>
+                          <td>{elemento.id}</td>
                           <td>{elemento.nombre}</td>
                           <td>{elemento.categoria}</td>
                           <td>{elemento.descripcion}</td>
