@@ -52,7 +52,7 @@ const SignIn = () => {
                                 // variant="primary"
                                 disabled={username.length === 0 || password.length === 0}
                             >
-                                SEE MY INVENTORY
+                                LOG IN
                             </Button>
                         </div>
                     </form>
