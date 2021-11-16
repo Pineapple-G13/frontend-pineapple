@@ -1,6 +1,37 @@
 .paddingh2{
     padding-top: 20px;
 }
+
 label{
-    padding-right: 20px;
+    /* padding-right: 20px; */
+    margin: 0px 5px;
+    padding-top: 10px;
+    
+}
+
+input {
+    width: 250px;
+}
+
+.loginLogo {
+    width: 150px;
+    height: 150px;
+  display: block;
+  margin: 0px 50px;
+}
+
+
+
+.btnLogin {
+    background: #FFD600;
+    width: 250px;
+    height: 30px;
+    color: black;
+    border: none ;
+}
+
+.cont{
+   align-items: center;
+   display: flex;
+   flex-direction: column;
 }
