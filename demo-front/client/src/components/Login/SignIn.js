@@ -1,10 +1,11 @@
-import React , { useState } from 'react';
+import React, { useState } from 'react';
 import { Button, Container, Row, Col } from 'react-bootstrap';
+import logoHome from '../../img/logoHome.svg'
 import './SignIn.css'
 
 const SignIn = () => {
-   /*  const authContext = React.useContext(CartContext);
-     */
+    /*  const authContext = React.useContext(CartContext);
+      */
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 
@@ -24,33 +25,36 @@ const SignIn = () => {
     } */
 
     return (
-        <Container>
-            <Row className="justify-content-md-center">
-                <Col md="6">
-                    <h2 className="paddingh2">Login</h2>
+        <Container className="cont">
+            <Row className="float-sm-center">
+                <Col md="5">
                     <form /* onSubmit={submit} */>
+                        <img src={logoHome} class="img-responsive" className="loginLogo" alt="logoHome" />
                         <div className="form-item">
-                            <label>User</label>
-                            <input 
-                                type="text" 
-                                onChange={e => setUsername(e.target.value)} 
+                            <label>User</label><br />
+                            <input
+                                type="text"
+                                onChange={e => setUsername(e.target.value)}
                             />
                         </div>
                         <br></br>
                         <div className="form-item">
-                            <label>Password</label>
-                            <input 
-                                type="password" 
-                                 onChange={e => setPassword(e.target.value)}
+                            <label>Password</label><br />
+                            <input
+                                type="password"
+                                onChange={e => setPassword(e.target.value)}
                             />
+                        </div><br />
+                        <div>
+                            <Button
+                                className="btnLogin"
+                                type="submit"
+                                // variant="primary"
+                                disabled={username.length === 0 || password.length === 0}
+                            >
+                                LOG IN
+                            </Button>
                         </div>
-                        <Button 
-                            type="submit"
-                            variant="primary"
-                            disabled={username.length === 0 || password.length === 0}
-                        >
-                            Login
-                        </Button>
                     </form>
                 </Col>
             </Row>
