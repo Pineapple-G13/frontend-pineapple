@@ -18,7 +18,8 @@ const Products = () => {
         categoria: '',
         descripcion:'',
         cantidad:0,
-        precio_unitario:0
+        precio_unitario:0,
+        picture:''
         });
         
     const seleccionarProducto=(elemento, caso)=>{
@@ -44,6 +45,7 @@ const Products = () => {
                 prod.descripcion=productSeleccionado.descripcion;
                 prod.cantidad=productSeleccionado.cantidad;
                 prod.precio_unitario=productSeleccionado.precio_unitario;
+                prod.picture=productSeleccionado.picture;
             }
         });
         setData(dataNueva);
@@ -84,11 +86,13 @@ const Products = () => {
                         <th>Descripcion</th>
                         <th>Cantidad</th>
                         <th>Precio Unitario</th>
+                        <th>Picture</th>
                         <th>Acciones</th>
                     </tr>
                     </thead>
                     <tbody>
                     {data.map((elemento)=>(
+                      
                         <tr key={elemento.id}>
                           <td>{elemento.id}</td>
                           <td>{elemento.nombre}</td>
@@ -96,12 +100,14 @@ const Products = () => {
                           <td>{elemento.descripcion}</td>
                           <td>{elemento.cantidad}</td>
                           <td>{elemento.precio_unitario}</td>
+                          <td><img src={`${process.env.PUBLIC_URL}/img/${elemento.picture}`} alt={elemento.nombre} width="50px" className="img-fluid"/></td>
                           <td><button className="btnEdit" onClick={()=>seleccionarProducto(elemento, 'Editar')} ><i className="fas fa-edit"></i></button>
                               <button className="btnEdit" onClick={()=>seleccionarProducto(elemento, 'Eliminar')}><i className="fas fa-trash-alt"></i></button>
                           </td>
                         </tr>
                     ))
                     }
+                    {console.log(data)}
                     </tbody>
                 </table>
                 <Modal isOpen={modalEditar}>
@@ -139,6 +145,11 @@ const Products = () => {
               value={productSeleccionado && productSeleccionado.categoria}
               onChange={handleChange}
             />
+            {/*  <select className="form-select" aria-label="Default select example" name="role" >
+              <option >Seleccionar Rol</option>
+              <option value="1">Admin</option>
+              <option value="2">Views</option>
+            </select> */}
             <br />
             <label>Descripcion</label>
             <input

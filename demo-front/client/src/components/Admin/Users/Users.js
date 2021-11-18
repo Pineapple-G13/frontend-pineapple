@@ -176,13 +176,18 @@ const Users = () => {
             />
             <br />
             <label>Role</label>
-            <input
+            <select className="form-select" aria-label="Default select example" name="role" >
+              <option >Seleccionar Rol</option>
+              <option value="1">Admin</option>
+              <option value="2">Views</option>
+            </select>
+            {/* <input
               className="form-control"
               type="text"
               name="role"
               value={userSeleccionado && userSeleccionado.role}
               onChange={handleChange}
-            />
+            /> */}
             <br />
           </div>
         </ModalBody>
@@ -292,13 +297,19 @@ const Users = () => {
             />
             <br />
             <label>Role</label>
-            <input
+
+            <select className="form-select" aria-label="Default select example" name="role" >
+              <option selected >Seleccionar Rol</option>
+              <option value="1">Admin</option>
+              <option value="2">Views</option>
+            </select>
+           {/*  <input
               className="form-control"
               type="text"
               name="role"
               value={userSeleccionado ? userSeleccionado.role: ''}
               onChange={handleChange}
-            />
+            /> */}
             <br />
           </div>
         </ModalBody>
