@@ -73,7 +73,7 @@ const Products = () => {
 
   return (
     <div className="container">
-      <h2 className="paddingH2">Productos</h2>
+      <h2 className="paddingH2">Products</h2>
       <br />
       <button className="btn btn-success" onClick={() => abrirModalInsertar()}>New Product</button>
       <br /><br />
@@ -81,13 +81,13 @@ const Products = () => {
         <thead>
           <tr>
             <th>ID</th>
-            <th>Nombre</th>
-            <th>Categoria</th>
-            <th>Descripcion</th>
-            <th>Cantidad</th>
-            <th>Precio Unitario</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Description</th>
+            <th>Quantity</th>
+            <th>Unit price</th>
             <th>Picture</th>
-            <th>Acciones</th>
+            <th>Accions</th>
           </tr>
         </thead>
         <tbody>
