@@ -13,6 +13,13 @@ import Users from './components/Admin/Users/Users'
 import Login from './components/Login/SignIn'
 
 function App() {
+  //Routes if not logged in
+  //codigo
+
+  //Routes if authenticated
+  //codigo
+
+  
   return (
     <div className="App">
     <Router>

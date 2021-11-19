@@ -1,0 +1,1 @@
+export const API_URL_ORIGIN = "http://localhost:3001/api/";
