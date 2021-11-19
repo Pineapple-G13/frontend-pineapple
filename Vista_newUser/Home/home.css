@@ -1,0 +1,55 @@
+.homeContainer{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+  }
+  .main.container{
+    padding-top: 20px;
+  }
+  footer{
+    margin: 10px 200px;
+  }
+  .headerIcon {
+    width: 25px;
+    height: 25px;
+    margin: 10px 5px;
+  }
+  
+  .homeLogo {
+    width: 300px;
+    height: 300px;
+  }
+  
+  header {
+    background: #FFD600;
+    margin: 20px 20px;
+  }
+  
+  .textoGit {
+    font-weight: 500;
+  }
+  
+  .textoDev {
+    font-weight: 300;
+  }
+
+  @media screen and (max-width:500px){
+      footer { 
+        margin: auto;
+        padding: auto;
+width: 80%;
+justify-content: center;
+      }
+      .homeLogo{
+          width: 100%;
+          margin: auto;
+          padding: auto;
+      }
+      .main.container{
+          padding: auto;
+          margin: auto;
+      }
+  }
+
+
+  
