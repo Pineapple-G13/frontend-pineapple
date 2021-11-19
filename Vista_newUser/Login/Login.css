@@ -35,3 +35,8 @@ input {
    display: flex;
    flex-direction: column;
 }
+
+.ifNavbar{
+    width: 100%;
+    height: 70px;
+  }
